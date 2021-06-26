@@ -121,6 +121,7 @@ function printQuote() {
 /***
   * created 'setTime' function
   * Syntax source of setInterval method: https://www.w3schools.com/js/js_timing.asp
+  * Syntax source of setInterval method: FSJS Project Instructions; Project 1 - Random Quote Generator
 ***/
  
  function setTime() { 
