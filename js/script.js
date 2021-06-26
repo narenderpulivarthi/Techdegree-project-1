@@ -99,24 +99,22 @@ function printQuote() {
    `<p class="quote">${rQuote.quote}</p>
     <p class="source">${rQuote.source}`
 
-      if(rQuote.citation){
-      html +=  `<span class="citation">${rQuote.citation}</span> `;
-      }
+    if(rQuote.citation){
+    html +=  `<span class="citation">${rQuote.citation}</span> `;
+    }
 
-      if(rQuote.year){
-      html += `<span class="year">${rQuote.year} </span>`;
-      }
+    if(rQuote.year){
+    html += `<span class="year">${rQuote.year} </span>`;
+    }
 
-      if(rQuote.tags){
-        html += `<span>, tags: ${rQuote.tags.join(', ')} </span>`;
-      }
-
-    `</p>`; 
+    if(rQuote.tags){
+      html += `<span>, tags: ${rQuote.tags.join(', ')} </span>`;
+    }`</p>`; 
  
   document.getElementById('quote-box').innerHTML = html; // Generates random quote on the web page
 
   document.body.style.backgroundColor = getRandomColor(); // Generates random color when the 'getRandomcolor' is called
-  }
+}
  
 /***
   * created 'setTime' function
@@ -124,7 +122,7 @@ function printQuote() {
   * Syntax source of setInterval method: FSJS Project Instructions; Project 1 - Random Quote Generator
 ***/
  
- function setTime() { 
+function setTime() { 
    printQuote();
 }
 setInterval(setTime, 10000); // set timer to 10 sec to generate random quote and color automatically
