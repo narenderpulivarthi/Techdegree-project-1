@@ -72,8 +72,8 @@ const quotes = [
  * create 'getRandomQuote' function
 ***/
 function getRandomQuote() {
-  let randomQuote = Math.floor(Math.random() * quotes.length);  // generates and stores the random index number of the object
-    return quotes[randomQuote]; // accessing the Properties of the object based on index number
+ let randomQuote = Math.floor(Math.random() * quotes.length);  // generates and stores the random index number of the object
+ return quotes[randomQuote]; // accessing the Properties of the object based on index number
 }
 
 /***
@@ -100,16 +100,17 @@ function printQuote() {
     <p class="source">${rQuote.source}`
 
     if(rQuote.citation){
-    html +=  `<span class="citation">${rQuote.citation}</span> `;
+     html +=  `<span class="citation">${rQuote.citation}</span> `;
     }
 
     if(rQuote.year){
-    html += `<span class="year">${rQuote.year} </span>`;
+      html += `<span class="year">${rQuote.year} </span>`;
     }
 
     if(rQuote.tags){
       html += `<span>, tags: ${rQuote.tags.join(', ')} </span>`;
-    }`</p>`; 
+    }
+    html += `</p>`;
  
   document.getElementById('quote-box').innerHTML = html; // Generates random quote on the web page
 
