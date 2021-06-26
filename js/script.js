@@ -73,23 +73,23 @@ const quotes = [
 ***/
 function getRandomQuote() {
   let randomQuote = Math.floor(Math.random() * quotes.length);  // generates and stores the random index number of the object
-    return quotes[randomQuote]; // accessing the Property of the object
+    return quotes[randomQuote]; // accessing the Properties of the object based on index number
 }
 
-
-
+/***
+ * create 'getRandomColor' function
+ * Modified and improved from the Syntax source: https://www.w3resource.com/javascript-exercises/javascript-math-exercise-40.php
+***/
 function getRandomColor() {
-  let x = Math.floor(Math.random() * 256);
-  let y = Math.floor(Math.random() * 256);
-  let z = Math.floor(Math.random() * 256);
-  let getColor = `rgb( ${x}, ${y}, ${z} )`;
+  let color = () => Math.floor(Math.random() * 256); 
+  let getColor = `rgb( ${color()}, ${color()}, ${color()} )`; // generates a random color and stores it.
   return getColor;
 }
 
 
 /***
- *Created a printQuote function
- *Created a variable named html and assigned the string through conditonal statements and concatenation
+ *Create a printQuote function
+ *Create a variable named html and assigned the string through conditonal statements and concatenation
 ***/
 function printQuote() {
   
@@ -109,7 +109,7 @@ function printQuote() {
 
       if(rQuote.tags){
         html += `<span>, tags: ${rQuote.tags.join(', ')} </span>`;
-        }
+      }
 
     `</p>`; 
  
